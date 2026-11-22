@@ -106,7 +106,7 @@ p,h1,h2,h3{margin:0}
 .s-bw__prod{position:absolute;z-index:2;left:50%;top:48%;width:min(62vw,560px);transform:translate(-50%,-50%) rotate(-7deg);filter:var(--sh-p)}
 .s-bw__prod--b{width:min(70vw,620px);transform:translate(-50%,-50%) rotate(6deg)}
 .is-on .s-bw__prod{animation:slam .5s var(--e-pop) both}
-@keyframes slam{from{transform:translate(-50%,-50%) rotate(-20deg) scale(1.5);opacity:0}}
+@keyframes slam{from{transform:translate(-50%,-50%) rotate(-20deg) scale(1.4);opacity:.4}}
 .s-bw__cap{position:absolute;z-index:2;left:var(--m-x);bottom:var(--s7);color:#fff;font:800 clamp(16px,2vw,24px)/1.1 var(--f);text-transform:uppercase;text-shadow:0 2px 12px rgba(0,0,0,.4)}
 
 .s-type{display:none;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 var(--s4)}
