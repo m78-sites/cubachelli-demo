@@ -1,6 +1,9 @@
 /* Cubachelli — демо-сайт для оптовиков, версия 3 (с нуля, 23.11.2026).
    Палитра — их бренд: бордо аватара, крем открыток, крафт коробок. Цвет добавляет сам продукт.
-   Шрифты: Lora (заголовки, курсив-акцент — как каллиграфическое слово в их постах) + Mulish (текст). */
+   Шрифты: Lora (заголовки, курсив-акцент — как каллиграфическое слово в их постах) + Mulish (текст)
+   + Didact Gothic (цифры, цены, ярлыки, кнопки — круглая «а» в один этаж, как в их логотипе). */
+@font-face{font-family:'Didact Gothic';font-style:normal;font-weight:400;font-display:swap;src:url(../fonts/didact-gothic-cyrillic-400-normal.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Didact Gothic';font-style:normal;font-weight:400;font-display:swap;src:url(../fonts/didact-gothic-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 
 /* ——— Шрифты ——— */
 @font-face{font-family:'Lora';font-style:normal;font-weight:400;font-display:swap;src:url(../fonts/lora-cyrillic-400-normal.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
@@ -50,6 +53,7 @@
 
   --f-display:'Lora',Georgia,'Times New Roman',serif;
   --f-text:'Mulish',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --f-accent:'Didact Gothic','Mulish',system-ui,sans-serif;
   --t-hero:clamp(40px,5.4vw,78px);
   --t-h2:clamp(34px,4.4vw,62px);
   --t-body:16px;
@@ -573,6 +577,23 @@ dialog::backdrop{background:rgba(20,5,4,.6);-webkit-backdrop-filter:blur(4px);ba
 /* ——— Появление при прокрутке ——— */
 .js .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s var(--e),transform .8s var(--e-out)}
 .js .reveal.is-in{opacity:1;transform:none}
+
+/* ——— Шрифт под логотип: цифры, цены, ярлыки, кнопки и вкладки ———
+   У Didact Gothic одно начертание, поэтому жирность не подделываем. */
+.hero__facts b,.pricetag__num,.rate b,.pcard__price,.pcard__tag,.chip,
+.btn,.tab,.bagbtn,.hdr__pdf,.lnk,.fab,.total b,.bi__sum,.spec dd,.add .n,.qty span{font-family:var(--f-accent);font-weight:400;font-synthesis:none}
+.btn{font-size:16px;letter-spacing:.01em}
+.tab{font-size:15px}
+.pcard__price{font-size:17px}
+.pcard__price small{font-size:12.5px}
+.pcard__tag{font-size:12px;letter-spacing:.02em}
+.chip{font-size:14px}
+.lnk{font-size:16px}
+.fab{font-size:16px}
+.total b{font-size:26px}
+.hero__facts b{font-size:clamp(32px,3.2vw,46px);letter-spacing:-.01em}
+.pricetag__num{font-size:42px}
+.rate b{font-size:40px}
 
 /* ——— Меньше движения ——— */
 @media (prefers-reduced-motion:reduce){
